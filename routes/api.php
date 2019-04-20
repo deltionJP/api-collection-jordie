@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['namespace' => 'Api', 'middleware' => ['auth:api']], function () {
+    Route::get('cat', 'ApiController@cat');
+    Route::get('quote', 'ApiController@getQuote');
+    Route::get('develop', 'ApiController@developQuote');
+    Route::get('gif', 'ApiController@getGif');
+});
