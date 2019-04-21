@@ -3,6 +3,7 @@
 use App\Services\CatPhotoService;
 use App\Services\QuoteService;
 use App\Services\GifService;
+use App\Services\IPService;
 use App\Http\Controllers\Controller;
 
 class ApiController extends Controller
@@ -25,5 +26,10 @@ class ApiController extends Controller
     public function getGif(GifService $gifService)
     {
         return $gifService->getGif();
+    }
+
+    public function ip(IPservice $ip)
+    {
+        return $ip;
     }
 }

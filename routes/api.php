@@ -22,4 +22,5 @@ Route::group(['namespace' => 'Api', 'middleware' => ['auth:api']], function () {
     Route::get('quote', 'ApiController@getQuote');
     Route::get('develop', 'ApiController@developQuote');
     Route::get('gif', 'ApiController@getGif');
+    Route::get('ip', 'ApiController@ip');
 });
